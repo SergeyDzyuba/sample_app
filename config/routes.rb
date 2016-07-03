@@ -4,7 +4,7 @@ SampleApp::Application.routes.draw do
   root 'static_pages#home'
 
   match '/signin', to: 'sessions#new', via: 'get'
-  match '/signout', to: 'sessions#destroy', via: 'get'
+  match '/signout', to: 'sessions#destroy', via: 'delete'
   match '/signup', to: 'users#new', via: 'get'
 
   match '/home',    to: 'static_pages#home',        via: 'get'
